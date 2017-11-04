@@ -20,7 +20,7 @@ public class SceneEg extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         Group root = new Group();
-        Scene scene = new Scene(root, 400, 400, Color.BLACK);
+        Scene scene = new Scene(root, 400, 400, Color.RED);
 
         //add a leaf node
         Circle cir = new Circle(200, 200, 100);
