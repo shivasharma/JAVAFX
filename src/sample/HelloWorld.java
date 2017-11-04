@@ -6,18 +6,18 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+//All javaFX class must extend application class
 public class HelloWorld extends Application {
 
     public static void main(String[] args) {
         launch(args);
     }
 
+
     @Override
     public void start(Stage primaryStage) {
-
-
         Button button = new Button();
-        button.setText("Say Helle JAVAFX");
+        button.setText("Say Hello JAVAFX");
 
         button.setOnAction(e -> System.out.println("Hello World"));
 
@@ -30,4 +30,5 @@ public class HelloWorld extends Application {
         primaryStage.show();
 
     }
+
 }
