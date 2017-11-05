@@ -17,7 +17,10 @@ public class simpleui extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        HBox box = FXMLLoader.load(getClass().getResource("simpleui.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("simpleui.fxml"));
+        HBox box = loader.load();
+        simpleuiController controller = loader.getController();
+
         Scene scene = new Scene(box);
         primaryStage.setScene(scene);
         primaryStage.show();

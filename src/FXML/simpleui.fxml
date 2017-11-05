@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<HBox alignment="CENTER" spacing="10">
+<?import javafx.scene.layout.*?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/8">
     <children>
         <Label text="User Name"/>
-        <TextField/>
+        <Label text="This is label"/>
+        <TextField fx:id="textField"/>
         <Button text="Connect"/>
-        <VBox>
-            <Label text="This is label"/>
-            <Button text="Buton1"/>
-            <Button text="Buton2"/>
-        </VBox>
+        <Button text="Buton2"/>
+        <GridPane>
+            <children>
+                <Label text="${textField.text}" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <Button text="Buton1" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Button text="Buton2" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            </children>
+        </GridPane>
     </children>
 
 </HBox>
