@@ -9,6 +9,6 @@ public class simpleuiController {
     public TextField textField;
 
     public void initialized() {
-        textField.setText("This is set throught controller");
+        textField.setText("This is set through controller");
     }
 }

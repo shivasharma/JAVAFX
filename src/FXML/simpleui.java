@@ -20,6 +20,7 @@ public class simpleui extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("simpleui.fxml"));
         HBox box = loader.load();
         simpleuiController controller = loader.getController();
+        System.out.println(controller.textField.getText());
 
         Scene scene = new Scene(box);
         primaryStage.setScene(scene);
