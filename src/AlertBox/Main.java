@@ -3,14 +3,14 @@ package AlertBox;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
     Stage window;
-    Button button;
-
+    Button button1;
+    Button button2;
     public static void main(String[] args) {
         launch(args);
     }
@@ -19,20 +19,23 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         window = primaryStage;
         window.setTitle("Alert Modal");
-        button = new Button("Click Me");
+        button1 = new Button("Click Me");
+        button2 = new Button("Open confirmation dialog");
 
-        button.setOnAction(e -> AlertBox.display("Title of the window", "This is alert box message"));
+        GridPane grid = new GridPane();
+        grid.add(button1, 1, 1);
+        grid.add(button2, 2, 1);
 
-        button = new Button("Open confirmation dialog");
-        button.setOnAction(e -> {
+        button1.setOnAction(e -> AlertBox.display("Title of the window", "This is alert box message"));
+
+
+        button2.setOnAction(e -> {
             boolean result = ConfirmBox.display("Title of the window", "Are you sure do you want close?");
             System.out.println(result);
         });
 
-        StackPane layout = new StackPane();
-        layout.getChildren().add(button);
 
-        Scene scene = new Scene(layout, 300, 250);
+        Scene scene = new Scene(grid, 300, 250);
         window.setScene(scene);
         window.show();
     }
