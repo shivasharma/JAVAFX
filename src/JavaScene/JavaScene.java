@@ -41,6 +41,6 @@ public class JavaScene extends Application {
 
         window.setScene(scene1);
         window.setTitle("This is a title");
-        window.show();
+        window.showAndWait();
     }
 }
