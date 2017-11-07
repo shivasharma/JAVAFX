@@ -20,7 +20,10 @@ public class Main extends Application {
         window = primaryStage;
         window.setTitle("Alert Modal");
 
-        window.setOnCloseRequest(e -> closeProgram());
+        window.setOnCloseRequest(e -> {
+            e.consume();
+            closeProgram();
+        });
 
 
         button1 = new Button("Click Me");
