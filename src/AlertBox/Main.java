@@ -20,7 +20,14 @@ public class Main extends Application {
         window = primaryStage;
         window.setTitle("Alert Modal");
         button = new Button("Click Me");
+
         button.setOnAction(e -> AlertBox.display("Title of the window", "This is alert box message"));
+
+        button = new Button("Open confirmation dialog");
+        button.setOnAction(e -> {
+            boolean result = ConfirmBox.display("Title of the window", "Are you sure do you want close?");
+            System.out.println(result);
+        });
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
