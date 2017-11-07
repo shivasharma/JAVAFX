@@ -19,6 +19,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         window = primaryStage;
         window.setTitle("Alert Modal");
+
+        window.setOnCloseRequest(e -> closeProgram());
+
+
         button1 = new Button("Click Me");
         button2 = new Button("Open confirmation dialog");
         button3 = new Button("Close Program");
@@ -43,7 +47,9 @@ public class Main extends Application {
     }
 
     private void closeProgram() {
-        System.out.println("Program Close");
-        window.close();
+        Boolean answer = ConfirmBox.display("Exit Program", "Are you sre do you want to exit?");
+        if (answer) {
+            window.close();
+        }
     }
 }
