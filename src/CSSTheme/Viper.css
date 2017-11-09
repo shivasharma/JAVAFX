@@ -8,6 +8,16 @@
 
 .button{
     -fx-background-color:#AB4567;
-    -fx-text-fill:#FFFFF;
+    -fx-text-fill:#ffffff;
     -fx-background-radius:6;
+}
+
+.button-blue{
+     -fx-background-color:#7cafc2;
+    -fx-text-fill:#ffffff;
+    -fx-background-radius:6;
+}
+
+#bold-label{
+ -fx-font-weight:bold;
 }

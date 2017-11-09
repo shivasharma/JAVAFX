@@ -32,6 +32,9 @@ public class Main extends Application {
 
         Text scenetitle = new Text("Please Login: ");
         Label userName = new Label("User Name:");
+        //Add css style with ID selector
+        userName.setId("bold-label");
+        //Adding css inline class
         userName.setStyle("-fx-text-fill:red");
         TextField userTextField = new TextField();
         Label pw = new Label("Password: ");
@@ -46,10 +49,15 @@ public class Main extends Application {
         grid.setGridLinesVisible(false);
 
         Button btn = new Button("Sign in");
+        Button btn1 = new Button("Sign Up");
+        //adding custom class
+        btn1.getStyleClass().add("button-blue");
         HBox hbBtn = new HBox(10);
         hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
         hbBtn.getChildren().add(btn);
+        hbBtn.getChildren().add(btn1);
         grid.add(hbBtn, 1, 4);
+
 
         final Text actiontarget = new Text();
         grid.add(actiontarget, 1, 6);
